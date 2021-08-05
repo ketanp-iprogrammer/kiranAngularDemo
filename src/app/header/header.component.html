@@ -1,0 +1,29 @@
+<p>hey Hi I am in header component</p>
+
+Parent value is : {{childData}}
+
+<button (click)="hideBtn()" >Button 1</button>
+
+{{isActive}}
+
+<!-- string interpolation, used to print value to html  -->
+
+<button  *ngIf="isActive" >Button 2</button>
+
+<div *ngFor="let data of showArr">
+    {{data}}
+</div>
+
+<div *ngFor="let data of jsonArr">
+    {{data.id}} {{data.name}}
+</div>
+
+<div *ngFor="let data of jsonArr">
+    <div *ngFor="let val of data | keyvalue">
+        {{val.key}} {{val.value}}
+    </div>
+
+</div>
+
+
+<!-- <app-footer></app-footer> -->
